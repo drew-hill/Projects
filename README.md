@@ -1,5 +1,5 @@
 # Projects
-Projects from Berkeley coursework and my free time.
+Projects from Kaggle, Berkeley coursework, and other.
 
 From UC Berkeley coursework (2016)
 - PH290 -- Big Data a Public Health Perspective
