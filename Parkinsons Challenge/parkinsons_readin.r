@@ -14,7 +14,7 @@ registerDoMC(detectCores()-2)
 ######### 
 # Situating the files of interest
 # set path to file repository
-files.path <- '~/Documents/UC Berkeley/Coursework/PH290-overflow/Projects - overflow/Data/Parkinsons Data/accel_only'
+files.path <- '~/Parkinsons Data/accel_only'
 # list all folders in directory
 files.folders <- list.files(files.path,full.names=TRUE)
 # list all .csv filenames
@@ -68,7 +68,7 @@ dt.master.accel <- dt.master.accel[!"DEFAULT"]
 ######### 
 # Situating the files of interest
 # set path to file repository
-files.path <- '~/Documents/UC Berkeley/Coursework/PH290-overflow/Projects - overflow/Data/Parkinsons Data/gps_only'
+files.path <- '~/Parkinsons Data/gps_only'
 # list all folders in directory
 files.folders <- list.files(files.path,full.names=TRUE)
 # list all .csv filenames
@@ -115,7 +115,7 @@ dt.master.gps <- dt.master.gps[!"TESTCLIQ"]
 ##################### Participant info
 #########
 # read in the csv
-info <- as.data.table(read.csv('~/Documents/UC Berkeley/Coursework/PH290-overflow/Projects - overflow/Data/Parkinsons Data/ParticipantInfo.csv'))
+info <- as.data.table(read.csv('~/Parkinsons Data/ParticipantInfo.csv'))
 
 # assign disease status
 info[Age.when.Diagnosed.with.Parkinson.s.Disease %in% c('control','Control'), pd:= 0]
@@ -144,4 +144,4 @@ dt <- merge(dt,info[,c('id','pd','male','time_since_diag','score'),with=FALSE], 
 
 
 # save as RDS
-system.time(saveRDS(dt, file='~/Documents/UC Berkeley/Coursework/PH290-overflow/Projects - overflow/Data/Parkinsons Data/RDS files/dt.master.RDS'))
+system.time(saveRDS(dt, file='~/Parkinsons Data/RDS files/dt.master.RDS'))
